@@ -1,21 +1,21 @@
 apiVersion: v1
-kind: Deployment
+Kind: Deployment
 metadata:
-  name: myjavaapp-deploy
+  name: deploywar
   labels:
-    app: myjavaapp
+    app: deploywar
 spec:
   replicas: 3
   selector:
     matchlabels:
-      app: myjavaapp
+      app: deploywar
 template:
   metadata:
      labels:
-        app: myjavaapp
+        app: deploywar
   spec:
     containers:
-    - name: myjavaapp-container
+    - name: deploywar-container
       image: lakshman9977/mydockerimagejun:1
       ports:
       - containerport: 8080
